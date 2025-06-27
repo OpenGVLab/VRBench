@@ -1,5 +1,6 @@
 # VRBench
 A Benchmark for Multi-Step Reasoning in Long Narrative Videos
+
 <!-- [![arXiv](https://img.shields.io/badge/arXiv-2506.10857-b31b1b.svg)](https://arxiv.org/abs/2506.10857) -->
 
 ## Updates
@@ -15,11 +16,9 @@ We propose VRBench, the first long narrative video benchmark crafted for evaluat
 
 If you find our repo useful for your research, please consider citing our paper:
 
-    @misc{yu2025vrbench,
-          title={VRBench: A Benchmark for Multi-Step Reasoning in Long Narrative Videos}, 
-          author={Jiashuo Yu and Yue Wu and Meng Chu and Zhifei Ren and Zizheng Huang and Pei Chu and Ruijie Zhang and Yinan He and Qirui Li and Songze Li and Zhenxiang Li and Zhongying Tu and Conghui He and Yu Qiao and Yali Wang and Yi Wang and Limin Wang},
-          year={2025},
-          eprint={2506.10857},
-          archivePrefix={arXiv},
-          primaryClass={cs.CV},
-          url={https://arxiv.org/abs/2506.10857}, 
+        @article{yu2025vrbench,
+          title={VRBench: A Benchmark for Multi-Step Reasoning in Long Narrative Videos},
+          author={Yu, Jiashuo and Wu, Yue and Chu, Meng and Ren, Zhifei and Huang, Zizheng and Chu, Pei and Zhang, Ruijie and He, Yinan and Li, Qirui and Li, Songze and others},
+          journal={arXiv preprint arXiv:2506.10857},
+          year={2025}
+        }
