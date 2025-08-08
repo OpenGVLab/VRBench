@@ -78,7 +78,7 @@ def main(
     elif "VideoLLaMA3" in model_name:
         from model_inference.videollama3 import generate_response
     elif "Keye-VL" in model_name:
-        from VRBench.inference.model_inference.keyevl import generate_response
+        from model_inference.keyevl import generate_response
     elif model_name in json.load(open(vllm_model_list_path))['language']:
         from model_inference.vllm_language_inference import generate_response
     else:
