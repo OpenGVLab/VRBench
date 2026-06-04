@@ -179,8 +179,8 @@ def batch_evaluation(args):
     
     # Model initialization
     if args.model == "gpt-4o":
-        api_key = "sk-so7zhdci3gxgggAyXM3UxevY0XsJGlzUzOXyMgdcQswplf7T"
-        base_url = "https://api.claudeshop.top/v1"
+        api_key = os.environ.get("OPENAI_API_KEY", "")
+        base_url = os.environ.get("OPENAI_BASE_URL", "https://api.openai.com/v1")
         model = BaseModel(api_key=api_key, base_url=base_url, separate=args.separate)
     else:
         model = BaseModel(model=args.model, api_key=args.api_key, base_url=args.base_url, separate=args.separate)
@@ -232,7 +232,7 @@ if __name__ == '__main__':
     parser.add_argument('--source_file', type=str, default='/mnt/petrelfs/wuyue/CODE/longvideoreasoning/multi-step-reasoning_llm_eval/inference_result/gpt4o_cot_result.jsonl')
     parser.add_argument('--summary_file', type=str, default='/mnt/petrelfs/wuyue/CODE/longvideoreasoning/LLM_Eval/data/processed_question_answer.jsonl')
     parser.add_argument('--model', type=str, default='gpt-4o', help='selected model for inference')
-    parser.add_argument('--api_key', type=str, default='eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoieXVqaWFzaHVvIiwiZXhwIjoxNzk4NzYxNjAwfQ.rkEcndq5pYnz_qVcBBk_pjua4cUV7vEm1rkUCtNjNjM')
+    parser.add_argument('--api_key', type=str, default=os.environ.get('OPENAI_API_KEY', ''))
     parser.add_argument('--base_url', type=str, default='https://180.163.156.42:21020/v1')
     parser.add_argument('--output_file', type=str)
     parser.add_argument('--separate', action='store_true', default=False)

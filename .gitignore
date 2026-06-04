@@ -197,4 +197,11 @@ outputs/*.jsonl
 **/results/*.json
 **/results/*.jsonl
 **/logs/*.json
-**/logs/*.jsonl 
+**/logs/*.jsonl
+
+# data dirs (moved to ../vrbench_data, kept as symlinks)
+inference/logs
+inference/outputs
+evaluation/eval_outputs
+*.log
+inference/test_infer.py

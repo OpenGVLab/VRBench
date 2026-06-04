@@ -60,7 +60,10 @@ class ReasoningEvaluationDatasetVLM(Dataset):
                         qa_dict['procedure'] = ""
                         qa_dict['type'] = "Unknown"
                     
-                    qa_dict['steps_and_answer'] = qa_result[0] if qa_result else ""
+                    if isinstance(qa_result, list):
+                        qa_dict['steps_and_answer'] = qa_result[0] if qa_result else ""
+                    else:
+                        qa_dict['steps_and_answer'] = qa_result if qa_result else ""
                     self.qa_ls.append(qa_dict)
             else:
                 # Original evaluation format: {"video_id": "...", "mcq": {...}, "mcq_answer": {...}}

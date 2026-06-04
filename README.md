@@ -9,6 +9,12 @@ This repository contains the implementation of VRBench
 
 ## Updates
 
+[06/2026] Added inference support and process-eval scripts for more recent models. Bug fixes and refactors:
+  - All inference modules now respect each query's `video_read_type` field with a decord ↔ pyav fallback.
+  - `evaluation/run_process_eval.py` (new): end-to-end DeepSeek-based process-score runner with async concurrency.
+  - `evaluation/compute_final_scores.py` (new): aggregates MCQ + process scores into a unified Final% leaderboard with per-reasoning-type breakdown.
+  - `inference/logs`, `inference/outputs`, `evaluation/eval_outputs` are now git-ignored (data lives outside the repo).
+
 [08/2025] The camera-ready version of VRBench has been released! Check the [arxiv](https://arxiv.org/abs/2506.10857) paper for the new updates.
 
 [07/2025] VRBench has been fully open-sourced! Check our data on [Huggingface](https://huggingface.co/datasets/OpenGVLab/VRBench)!

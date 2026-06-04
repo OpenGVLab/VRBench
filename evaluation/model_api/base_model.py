@@ -12,8 +12,6 @@ from tenacity import retry, stop_after_attempt, wait_exponential
 
 # Using proxy URLs with specific APIs eliminates the need to send requests to OpenAI directly
 # Usage is consistent with OpenAI official API, only need to modify baseurl
-# Baseurl = "https://api.claudeshop.top"
-# Skey = "sk-so7zhdci3gxgggAyXM3UxevY0XsJGlzUzOXyMgdcQswplf7T"
 
 class BaseModel:
     def __init__(self, model='gpt-4o', api_key='your_api_key', base_url='your_base_url', separate=False):
